@@ -1,12 +1,3 @@
-/*****************************************************************************
-# Author:           Devri Anderson 
-# Lab:              Assignment #5
-# Date:             October 28, 2021
-# Description:      This program decodes mysterious abbreviation lingo!
-# Input:            textMessage   
-# Output:           textMessage
-# Sources:          ZyBooks Ch. 5
-******************************************************************************/
 #include <iostream>
 #include <string>
 #include <cctype>
@@ -33,31 +24,39 @@ int main() {
 
   
   cout << "You entered: " << textMessage << endl << endl;
-  if ((textMessage.find("IDK") != string::npos))
+  
+   // Convert the input text message to uppercase
+  string upperCaseMessage = "";
+  for (int i = 0; i < textMessage.length(); i++) {
+    upperCaseMessage += toupper(textMessage[i]);
+  }
+  
+  // display to the user the abbreviated words
+  if ((upperCaseMessage.find("IDK") != string::npos))
   {
     cout << "IDK: " << IDK << endl;
   }
-  if ((textMessage.find("OMG") != string::npos))
+  if ((upperCaseMessage.find("OMG") != string::npos))
   {
     cout << "OMG: " << OMG << endl;
   }
-  if ((textMessage.find("ILY") != string::npos))
+  if ((upperCaseMessage.find("ILY") != string::npos))
   {
     cout << "ILY: " << ILY << endl;
   }
-  if ((textMessage.find("JK") != string::npos))
+  if ((upperCaseMessage.find("JK") != string::npos))
   {
     cout << "JK: " << JK << endl;
   } 
-  if ((textMessage.find("BFF") != string::npos))
+  if ((upperCaseMessage.find("BFF") != string::npos))
   {
     cout << "BFF: " << BFF << endl;
   }  
-  if ((textMessage.find("TTYL") != string::npos))
+  if ((upperCaseMessage.find("TTYL") != string::npos))
   {
     cout << "TTYL: " << TTYL << endl;
   }  
-  if ((textMessage.find("TMI") != string::npos))
+  if ((upperCaseMessage.find("TMI") != string::npos))
   {
     cout << "TMI: " << TMI << endl;
   }  
